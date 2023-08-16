@@ -3,9 +3,11 @@ package com.webApp.employeeManagementRestApi.ServiceInterface;
 import java.util.List;
 
 import org.springframework.data.domain.Sort.Direction;
+import org.springframework.stereotype.Service;
 
 import com.webApp.employeeManagementRestApi.Entity.Employee;
 
+@Service
 public interface EmployeeSreviceInterface {
 
 	Employee addemployee(Employee employee);
