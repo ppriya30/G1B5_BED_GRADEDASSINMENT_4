@@ -45,7 +45,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.authorizeRequests().antMatchers("/Employee/addrole", "/Employee/adduser").permitAll()
-				.antMatchers("/Employee/list", "/Employee/employeeById", "/Employee/update", "/Employee/delete")
+				.antMatchers("/Employee/list", "/Employee/employeeById", "/Employee/update", "/Employee/delete",
+						"/Employee/sortByFirstName", "/Employee/getfirstNameList")
 				.hasAnyAuthority("USER", "ADMIN").antMatchers("/Employee/addemployee").hasAuthority("ADMIN")
 				.anyRequest().authenticated().and().httpBasic().and().cors().and().csrf().disable();
 	}
